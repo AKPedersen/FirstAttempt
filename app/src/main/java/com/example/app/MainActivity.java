@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -60,6 +62,16 @@ public class MainActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+    }
+
+    public void buttonOnClick(View v)
+    {
+        // Do something when the button is clicked
+        Button button = (Button) v;
+        button.setText("Clicked");
+        TextView myTextView=(TextView)findViewById(R.id.textView);
+        myTextView.setText("Clicked");
+
     }
 
 }
